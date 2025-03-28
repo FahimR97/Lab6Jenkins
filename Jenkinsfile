@@ -13,5 +13,10 @@ pipeline {
                 sh 'echo "Webhook is working!"'
             }
         }
+        stage('Verification') {
+            steps {
+                sh 'echo "Automated Pipeline Successfully Triggered"'
+            }
+        }
     }
 }
