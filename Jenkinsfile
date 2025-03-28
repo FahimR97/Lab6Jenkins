@@ -1,15 +1,16 @@
 pipeline {
-    agent { label 'any' }    // or just use: agent any
+    agent any
     
     stages {
         stage('Hello') {
             steps {
                 sh 'echo "Hello World"'
+                sh 'date'
             }
         }
         stage('Test Webhook') {
             steps {
-                sh 'echo "Webhook test"'
+                sh 'echo "Webhook is working!"'
             }
         }
     }
